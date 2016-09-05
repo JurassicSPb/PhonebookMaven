@@ -15,9 +15,8 @@
  */
 public class Main {
     public static void main(String[] args) {
-        DetailContact book = new DetailContact();
         Gson gson = new Gson();
-        String json = gson.toJson(book);
+
         ArrayList<DetailContact> contacts = new ArrayList<>();
         File inputFile = new File("contacts.txt");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -63,6 +62,7 @@ public class Main {
         @Override
         public void actionPerformed(ActionEvent e) {
                 try {
+                DetailContact book = new DetailContact();
                 PrintWriter writer = new PrintWriter(new FileOutputStream(inputFile, true));
                 String name = JOptionPane.showInputDialog(frame, "Введите имя:", "Введите значение", JOptionPane.WARNING_MESSAGE);
                 book.setName(name);
@@ -101,8 +101,8 @@ public class Main {
 
                 writeSerialize(book);
 
-                FileWriter gsonWriter = new FileWriter("gson.json", true);
-
+                FileWriter gsonWriter = new FileWriter("gson.json");
+                String json = gson.toJson(book);
                 gsonWriter.write(json);
                 gsonWriter.close();
 
