@@ -1,0 +1,6 @@
+scs, [23r], fwe, wfe, wfe
+wef, [342], wef, wef, wfe
+swad, [23], fwf, wefwe, wef
+frewf, [213], fwef, wefwef, wfe
+ferf, [24], wf, wf, wef
+wfe, [234], wf, wf, wf
